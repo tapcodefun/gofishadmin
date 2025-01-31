@@ -1,0 +1,26 @@
+admin:
+  prefix: "admin"
+  siteName: "Fishcode"
+database:
+  logger:
+    path:    "./logs"
+    level:   "all"
+    stdout:  true
+  default:
+    type: "mysql"
+    link:  "mysql:root:123456@tcp(localhost:3306)/devscan"
+    extra: "charset=utf8mb4&parseTime=True&loc=Local"
+    debug: true
+  mysql:
+    type: "mysql"
+    host: "localhost"
+    port: "3306"
+    user: "root"
+    pass: "123456"
+    name: "devscan"
+    charset: "utf8mb4"
+    timezone: "Local"
+    maxIdle: "10"
+    maxOpen: "100"
+    maxLifetime: "30s"
+    extra: "parseTime=True"
